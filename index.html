@@ -1,0 +1,107 @@
+<!-- This is the Home Page of Travelopia -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/x-icon" href="/assets/brand-icon.svg">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Links To All Style Files -->
+    <link rel="stylesheet" href="./index.css">
+    <title>Travelopia | Embark On New Adventures</title>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <img src="./assets/logo.png" alt="Travelopia" />
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Destination</a></li>
+                <li><a href="/">Feedback</a></li>
+            </ul>
+            <div id="login-container">
+                <a href="/" id="loginBtn"><i class="fa-solid fa-user" id="login-btn"></i></a>
+                <div style="display: none;">
+                    <i class="fa-solid fa-cart-shopping" style="margin-right:1rem"></i>
+                </div>       
+            </div>
+            <div class="responsive-nav">
+                <i class="fa-solid fa-bars" style="color:var(--primary);font-size: medium;"></i>
+                <div class="responsive-nav-content">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/">Destination</a></li>
+                        <li><a href="/">Feedback</a></li>
+                    </ul>
+                    <div id="login-container">
+                        <a href="/"><i class="fa-solid fa-user" id="login-btn"></i></a>
+                        <div style="display: none;">
+                            <a href='/'><i class="fa-solid fa-cart-shopping" style="margin-right:1rem"></i></a>
+                            <a href="/" id="logout-btn" class='btn-small' style='border-radius:50px;color:var(--primary)'>Log Out</a>
+                        </div>       
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+      <div id="overlay">
+            <img id="background-image" src="./assets/travel.jpg" alt="Travel Image">
+            
+            <div class="adventures">
+                <h1 id="title">Adventurous insights</h1>
+                <p class="para">Embark On New Adventures</p>
+                <button id="click-button" onclick="showAlert()">Click here</button>
+                <div id="popup" class="popup">
+                  <img src="./assets/tick.png" alt="">
+                  <h2>Hello!!! World...</h2>
+                  <button type="button" onclick="closePopup()">OK</button>
+                </div>
+            </div>
+        </div>
+          
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <img src="./assets/logo.png" alt="Travelopia">
+                <ul class="ul">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Destination</a></li>
+                    <li><a href="/">Feedback</a></li>
+                    
+                </ul>
+                <div>
+
+                        <div class="socials">
+                            <div class="social">
+                                  <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                              </div>
+                              <div class="social">
+                                    <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                              </div>
+                              <div class="social">
+                                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                              </div>
+                        </div>
+                        <p style="color: gray;"><i class="fa-regular fa-copyright"></i> 2023 Travelopia</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+      let popup = document.getElementById('popup');
+
+       function showAlert() {
+            popup.classList.add("open-popup");
+        }
+       function closePopup() {
+            popup.classList.remove("open-popup");
+        }
+</script>

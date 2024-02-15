@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); /* Main Font Style and Secondary Font Style Of the Website */
+:root {
+  /* COLORS */
+  --primary: #3e75b0; /* brand color */
+  
+  /* Font Styles */
+  --heading-font-style: "Outfit", sans-serif;
+  --primary-font-style: "Poppins", sans-serif;
+  --secondary-font-style: "Audiowide", cursive;
+
+  /* Font Sizes */
+
+  --nav-link: 1.1rem; /* for links in navgation and footer */
+  --icon-size: 1.35rem;
+  --icon-size-small: 1.2rem;
+  /*  */
+}
+
+
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: var(--primary-font-style);
+}
+/* Default Heading & Paragraph Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--white);
+  font-family: var(--heading-font-style);
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 1.2;
+}
+.para {
+  font-size: 25px;
+  color: rgb(94, 88, 88);
+  letter-spacing: 3px;
+  margin-top: 0px;
+}
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+}
+
+
+
+/**** Header/Navigation Styling ****/
+header {
+  padding-block: 0.5rem;
+}
+
+/* Logo */
+
+header img:first-of-type,
+.footer img:first-of-type {
+  width: 7rem;
+}
+
+/* Navigation Links */
+header nav,
+header nav ul,
+.footer,
+.footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav ul {
+  gap: 3rem;
+}
+
+.footer ul {
+  gap: 2rem;
+}
+
+header nav ul li a,
+.footer ul li a {
+  font-size: var(--nav-link);
+  color: var(--primary);
+  transition: color 0.2s ease-out;
+}
+
+header nav ul li a:hover,
+.footer ul li a:hover {
+  color: gray;
+}
+
+/* User Icon */
+header i {
+  font-size: var(--icon-size);
+  transition: color 0.2s ease-out;
+  color: var(--primary);
+  cursor: pointer;
+}
+header i:hover {
+  color: gray;
+}
+.responsive-nav{
+  display:none;
+  position:relative;
+}
+.responsive-nav-content{
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top:150%;
+  right:0;
+  width: 95vw;
+  border-radius: 1rem 0 1rem 1rem;
+  padding:1rem;
+}
+.responsive-nav-content>*{
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.responsive-nav-content ul{
+  display:flex;
+  flex-direction: column;
+}
+.responsive-nav-active{
+  display:block !important;
+}
+/****** Footer Styling ******/
+footer {
+  margin-top: auto;
+  text-align: center;
+  background-color: var(--white);
+  padding-block: 4rem 2rem;
+  border-radius: 4rem 4rem 0 0;
+}
+footer h1 {
+  max-width: 70%;
+  margin: auto;
+  margin-bottom: 2.5rem;
+}
+footer h1 span {
+  color: var(--highlight);
+}
+hr {
+  margin-top: 7.5em;
+}
+footer .footer {
+  padding-block: 1rem;
+  margin-bottom: 1rem;
+}
+
+footer .socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+footer .socials > * {
+  margin-inline: 1rem;
+}
+footer .socials .social {
+  border-radius: 8px;
+  outline: 1px solid var(--primary);
+
+  cursor: pointer;
+  transition: color 0.2s ease-out, outline-color 0.2s ease-out;
+}
+footer .socials .social a {
+  display: grid;
+  place-items: center;
+  padding: 0.5em;
+  color: var(--primary);
+  transition: color 0.2s ease-out, outline-color 0.2s ease-out;
+}
+footer .socials .social a:hover {
+  color: var(--primary);
+  outline-color: var(--primary);
+}
+
+/**** Utility Classes *****/
+/*  */
+.container {
+  width: min(77.5rem, 95%);
+  margin-inline: auto;
+}
+
+.popup {
+      width: 250px;
+      height: 300px;
+      background-color: white;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.1);
+      text-align: center;
+      padding: 0 30px 30px;
+      color: var(--primary);
+      border-radius: 25px;
+      visibility: hidden;
+      transition: transform 0.4s, top 0.4s;
+      z-index: 5;
+}
+.open-popup {
+      visibility: visible;
+      top: 70%;
+      transform: translate(-50%, -50%) scale(1);
+}
+.popup img {
+ padding-top: 20px;
+      width: 100px;
+      margin: auto;
+}
+.popup h2 {
+      font-size: 35px;
+      font-weight: 500;
+      margin: 10px 0 0px;
+}
+.popup button {
+      width: 100%;
+      margin-top: 50px;
+      padding: 7px 0 20px;
+      background: var(--primary);
+      color: white;
+      border-radius: 25px;
+      font-size: large;
+      font-weight: 500;
+      z-index: 10;
+      cursor: pointer;
+      border: #3e75b0;
+}
+/* image styling */
+main {
+            margin: 0;
+            overflow: hidden;
+            height: 100vh;
+        
+}
+#overlay {
+      top: 100px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+#background-image {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.5;
+      /* background-color: rgba(0,0,0,0.3);
+      backdrop-filter: blur(16px); */
+  }
+  .adventures {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  #title {
+      color: rgb(73, 70, 70);
+      font-size: 60px;
+      font-weight: 500;
+      letter-spacing: 5px;
+      text-align: center;
+      margin-bottom: 20px;
+      z-index: 1;
+      margin-bottom: 0px;
+  }
+
+  #click-button {
+      padding: 10px 20px;
+      font-size: 1.5em;
+      color: white;
+      border-radius: 25px;
+      background-color: var(--primary);
+      border: none;
+      cursor: pointer;
+  }
+#click-button:hover {
+      box-shadow: rgba(160, 160, 181, 0.8) 0px 8px 24px, rgba(179, 179, 194, 0.8) 0px 16px 56px, rgba(174, 174, 192, 0.8) 0px 24px 80px;
+}
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 1050px) {
+  
+  /* Header */
+  header nav ul {
+    gap: 2rem;
+  }
+
+  .footer ul {
+    gap: 1rem;
+  }
+
+  /* User Icon */
+  header i {
+    font-size: var(--icon-size-small);
+  }
+  /* Footer */
+  footer {
+    padding-block: 3rem 2rem;
+    border-radius: 3rem 3rem 0 0;
+  }
+  footer .footer {
+    padding-block: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+
+}
+
+@media screen and (max-width: 300px) {
+      #overlay {
+            text-align: center;
+      }
+      #title {
+      font-size: 30px;
+      letter-spacing: 1px;
+      }
+      .para {
+            font-size: 20px;
+            letter-spacing: 1px;
+          }
+}
+@media screen and (max-width: 450px) {
+      #title {
+      font-size: 35px;
+      }
+      .para {
+            font-size: 20px;
+            letter-spacing: 1px;
+          }
+}
+@media screen and (max-width: 600px) {
+  :root{
+     /* Font Sizes */
+ 
+  --nav-link: 0.65rem; 
+  --icon-size: 1rem;
+  --icon-size-small: 0.75rem;
+  }
+  /* Header */
+  .container>ul,
+  .container>#login-container{
+    display: none;
+  }
+
+  .responsive-nav{
+    display:block !important;
+  }
+
+
+  .footer ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* Footer */
+  footer {
+    padding-block: 2rem 1rem;
+    border-radius: 3rem 3rem 0 0;
+  }
+
+  .footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+  }
+  .footer ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+  }
+  
+  .footer ul li {
+      margin: 0 15px;
+  }
+  
+  .footer ul a {
+      text-decoration: none;
+      color: black;
+  }
+  
+
+  
+}
