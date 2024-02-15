@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./index.css">
     <title>Travelopia | Embark On New Adventures</title>
 </head>
-<body>
+<body class="loaded">
     <header>
         <nav class="container">
             <img src="./assets/logo.png" alt="Travelopia" />
@@ -96,6 +96,9 @@
 </body>
 </html>
 <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.body.classList.add('loaded');
+    });
       let popup = document.getElementById('popup');
 
        function showAlert() {
