@@ -1,233 +1,105 @@
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); /* Main Font Style and Secondary Font Style Of the Website */
 :root {
-  /* COLORS */
-  --primary: #3e75b0; /* brand color */
-  
-  /* Font Styles */
+  --primary: rgb(45, 149, 150, 1); 
   --heading-font-style: "Outfit", sans-serif;
-  --primary-font-style: "Poppins", sans-serif;
-  --secondary-font-style: "Audiowide", cursive;
-
-  /* Font Sizes */
-
-  --nav-link: 1.1rem; /* for links in navgation and footer */
-  --icon-size: 1.35rem;
-  --icon-size-small: 1.2rem;
-  /*  */
 }
 
-
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul,
-ol {
-  list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-body {
-  max-width: 100vw;
-  max-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  font-family: var(--primary-font-style);
-}
-/* Default Heading & Paragraph Styles */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--white);
+*{
+  margin: 0;
+  padding: 0;
   font-family: var(--heading-font-style);
-  text-transform: uppercase;
-  font-weight: 900;
-  line-height: 1.2;
 }
-.para {
-  font-size: 25px;
-  color: white;
-  letter-spacing: 3px;
-  margin-top: 0px;
-  animation: moveInRight 1s ease-in-out;
+body {
+  box-sizing: border-box;
 }
-/* A elements that don't have a class get default styles */
-a {
-  text-decoration: none;
+header {
+  height: 100px;
 }
 
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-}
-
-/* Logo */
-
-header img:first-of-type,
-.footer img:first-of-type {
-  width: 7rem;
-}
-
-/* Navigation Links */
-header nav,
-header nav ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-header nav ul {
-  gap: 3rem;
-}
-
-
-header nav ul li a {
-  font-size: var(--nav-link);
-  color: var(--primary);
-  transition: color 0.2s ease-out;
-}
-
-header nav ul li a:hover{
-  color: gray;
-}
-
-/* User Icon */
-header i {
-  font-size: var(--icon-size);
-  transition: color 0.2s ease-out;
-  color: var(--primary);
-  cursor: pointer;
-}
-header i:hover {
-  color: gray;
-}
-.responsive-nav{
-  display:none;
-  position:relative;
-}
-.responsive-nav-content{
-  display: none;
-  position: absolute;
-  z-index: 100;
-  top:150%;
-  right:0;
-  width: 95vw;
-  padding:0rem 1rem;
-}
-.responsive-nav-content>*{
-  margin-bottom: 1rem;
-  text-align: center;
-}
-.responsive-nav-content ul{
-  display:flex;
-  flex-direction: column;
-}
-.responsive-nav-active{
-  display:block !important;
-}
 /****** Footer Styling ******/
 footer {
-  margin-top: auto;
-  text-align: center;
+  height: 100px;
   background-color: var(--white);
-  margin-top: 25px;
-}
-footer .footer {
   display: flex;
+  justify-content:center;
+  align-items: center;
 }
 
-body {
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-  }
-
-  body.loaded {
-      opacity: 1;
-  }
-/**** Utility Classes *****/
-/*  */
 .container {
-  width: min(77.5rem, 95%);
-  margin-inline: auto;
+  width: 80%;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-  
-/* image styling */
-main {
-            margin: 0;
-            overflow: hidden;
-            height:75vh;
-            margin-bottom: 0px;
-        
-}
 #overlay {
-      top: 100px;
-      left: 0;
-      width: 100%;
-      height: 75vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  height: calc(100vh - 200px);
+      width: 100vw;
+      position: relative;
 }
-#background-image {
-      position: absolute;
-      top: 100px;
-      left: 0;
-      width: 100%;
-      height: 75vh;
-      z-index: -1;
-      opacity: 0.5;
-      /* background-color: rgba(0,0,0,0.3);
-      backdrop-filter: blur(16px); */
-  }
+.img-div {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.img-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left bottom;
+}
+.text-bg-overlay{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    to bottom left,
+    rgb(45, 149, 150, 0.8),
+    rgb(154, 208, 194, 0.8)
+  );
+}
   .adventures {
+    position: absolute;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
   }
 
   #title {
-      /* color: rgb(40, 38, 38); */
       color: white;
-      font-size: 60px;
-      font-weight: 500;
+      font-size: 80px;
+      font-weight: 200;
       letter-spacing: 5px;
       text-align: center;
-      margin-bottom: 20px;
-      z-index: 1;
-      margin-bottom: 0px;
       animation: moveInLeft 1s ease-in-out;
   }
 
+  .para {
+    font-size: 25px;
+    color: white;
+    letter-spacing: 3px;
+    animation: moveInRight 1s ease-in-out;
+  }
+
   .click-button {
-      padding: 10px 20px;
-      font-size: 1.5em;
-      color: white;
+      padding: 10px 25px;
+      font-size: 15px;
+      color:var(--primary);
       border-radius: 25px;
-      background-color: var(--primary);
+      background-color: white ;
       border: none;
       cursor: pointer;
-      position: relative;
       display: inline-block;
       transition: all 0.5s;
+      margin-top: 15px;
       animation: moveInButton 0.5s ease-out 0.75s;
       animation-fill-mode: backwards;
     }
@@ -239,22 +111,22 @@ main {
 
     .popup {
       width: 250px;
-      height: 300px;
-      background-color: white;
+      height: 280px;
+      background-color: whitesmoke;
       position: absolute;
       top: 0;
       left: 50%;
       /* transform: translate(-50%, -50%) scale(0.1); */
       text-align: center;
       padding: 0 30px 30px;
-      color: var(--primary);
+      color: rgb(82, 126, 207);
       border-radius: 25px;
-      visibility: hidden;
+      display: none;
       transition: transform 0.4s, top 0.4s;
       z-index: 5;
 }
 .open-popup {
-      visibility: visible;
+  display: block;
       top: 50%;
       transform: translate(-50%, -50%) scale(1);
 }
@@ -272,7 +144,7 @@ main {
       width: 100%;
       margin-top: 30px;
       padding: 10px 20px;
-      background: var(--primary);
+      background:rgb(82, 126, 207);
       color: white;
       border-radius: 25px;
       font-size: large;
@@ -293,15 +165,9 @@ main {
 /* Media Queries */
 
 @media screen and (max-width: 1050px) {
-  header nav ul {
-    gap: 2rem;
-  }
+  
   footer {
-    margin-top: 60px;
-  }
-  /* User Icon */
-  header i {
-    font-size: var(--icon-size-small);
+    margin-top: 30px;
   }
 }
 
@@ -332,12 +198,9 @@ main {
             font-size: 20px;
             letter-spacing: 1px;
       }
-      .footer p:nth-child(1) {
-        display: none;
-      }
       
       footer {
-        margin-top: 35px;
+        margin-top: 15px;
       }
 }
 @media screen and (max-width: 600px) {
@@ -349,16 +212,10 @@ main {
   --icon-size-small: 0.75rem;
   }
   /* Header */
-  .container>ul,
-  .container>#login-container{
-    display: none;
-  }
+  
   footer {
     margin-top: 10px;
   }
-  .responsive-nav{
-    display:block !important;
-  } 
 }
 
 /* animations */
