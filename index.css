@@ -20,9 +20,6 @@ header {
 footer {
   height: 100px;
   background-color: var(--white);
-  display: flex;
-  justify-content:center;
-  align-items: center;
 }
 
 .container {
@@ -167,7 +164,10 @@ footer {
 @media screen and (max-width: 1050px) {
   
   footer {
-    margin-top: 30px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -187,7 +187,10 @@ footer {
 @media screen and (max-width: 400px) {
   
   footer {
-    margin-top: 10px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media screen and (max-width: 450px) {
@@ -200,7 +203,10 @@ footer {
       }
       
       footer {
-        margin-top: 15px;
+        margin-top: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 }
 @media screen and (max-width: 600px) {
@@ -214,7 +220,10 @@ footer {
   /* Header */
   
   footer {
-    margin-top: 10px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
