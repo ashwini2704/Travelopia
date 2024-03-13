@@ -16,11 +16,6 @@ header {
   height: 100px;
 }
 
-/****** Footer Styling ******/
-footer {
-  height: 100px;
-  background-color: var(--white);
-}
 
 .container {
   width: 80%;
@@ -149,27 +144,23 @@ footer {
       z-index: 10;
       cursor: pointer;
       text-align: center;
-      border: 2px solid #3e75b0; /* Add 'solid' and specify width and color */
+      border: 2px solid #3e75b0;
   }
-.footer {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
+
+   footer {
+    height: 100px;
+  background-color: var(--white);
+        margin-top: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
 .footer p:nth-child(1) {
   color: var(--primary);
 }
 /* Media Queries */
 
-@media screen and (max-width: 1050px) {
-  
-  footer {
-    margin-top: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
 
 @media screen and (max-width: 300px) {
       #overlay {
@@ -184,15 +175,6 @@ footer {
             letter-spacing: 1px;
           }
 }
-@media screen and (max-width: 400px) {
-  
-  footer {
-    margin-top: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
 @media screen and (max-width: 450px) {
       #title {
       font-size: 35px;
@@ -201,30 +183,6 @@ footer {
             font-size: 20px;
             letter-spacing: 1px;
       }
-      
-      footer {
-        margin-top: 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-}
-@media screen and (max-width: 600px) {
-  :root{
-     /* Font Sizes */
- 
-  --nav-link: 0.65rem; 
-  --icon-size: 1rem;
-  --icon-size-small: 0.75rem;
-  }
-  /* Header */
-  
-  footer {
-    margin-top: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 }
 
 /* animations */
