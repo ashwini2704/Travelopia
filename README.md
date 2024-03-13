@@ -1,6 +1,6 @@
 ## Introduction
 
-Welcome to the Travelopia website repository! This repository contains a small assignment project created for Travel Luxe. The project is a static website built using HTML, CSS, and JavaScript. 
+Welcome to the Travelopia website repository! This repository contains a small assignment project created for Travelopia. The project is a static website built using HTML, CSS, and JavaScript. 
 
 ## Deployed Link -  https://travelopia-adventure.netlify.app/
 
