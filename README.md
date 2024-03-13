@@ -8,9 +8,9 @@ Welcome to the Travelopia website repository! This repository contains a small a
 
 
 ## Technologies Used
-HTML: For creating the structure and content of the website.
-CSS: For styling and layout.
-JavaScript: Implemented to add interactivity and dynamic behavior to the website.
+- HTML: For creating the structure and content of the website.
+- CSS: For styling and layout.
+- JavaScript: Implemented to add interactivity and dynamic behavior to the website.
 
 ...
 
